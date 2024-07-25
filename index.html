@@ -1,73 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sticky YouTube Video</title>
-  <style>
-    #video-container {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      width: 30%;
-      height: auto;
-      overflow: hidden;
-      max-width: 100%;
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    }
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  </style>
-</head>
-<body>
-  <div id="video-container">
-    <div id="player"></div>
-  </div>
-
-  <script>
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    var player;
-    var startTime = 26; // 시작 시간 (초)
-    var endTime = 36; // 끝 시간 (초)
-
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('player', {
-        height: '100%',
-        width: '100%',
-        videoId: 'tD-MPekRiWI',
-        playerVars: {
-          'autoplay': 1,
-          'mute': 1,
-          'start': startTime,
-          'end': endTime,
-          'loop': 1,
-          'playlist': 'tD-MPekRiWI'
-        },
-        events: {
-          'onReady': onPlayerReady,
-          'onStateChange': onPlayerStateChange
-        }
-      });
-    }
-
-    function onPlayerReady(event) {
-      event.target.playVideo();
-    }
-
-    function onPlayerStateChange(event) {
-      if (event.data == YT.PlayerState.ENDED) {
-        player.seekTo(startTime);
-      }
-    }
-  </script>
-</body>
-</html>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+</style>
+<table class="tg" style="undefined;table-layout: fixed; width: 836px"><colgroup>
+<col style="width: 167.2px">
+<col style="width: 272.2px">
+<col style="width: 396.2px">
+</colgroup>
+<thead>
+  <tr>
+    <th class="tg-c3ow">기간</th>
+    <th class="tg-c3ow">룸타입</th>
+    <th class="tg-c3ow">조식포함</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-c3ow" rowspan="5">2024.06.01 ~ 2024.10.31</td>
+    <td class="tg-c3ow">디럭스</td>
+    <td class="tg-c3ow">$115</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">디럭스 오션</td>
+    <td class="tg-c3ow">$130</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">2베드 가든뷰</td>
+    <td class="tg-c3ow">$250</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">3베드 가든뷰</td>
+    <td class="tg-c3ow">$295</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">4베드 가든뷰</td>
+    <td class="tg-c3ow">$380</td>
+  </tr>
+</tbody>
+</table>
